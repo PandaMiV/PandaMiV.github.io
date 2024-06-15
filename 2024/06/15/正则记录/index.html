@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>正则记录 | PandaM_Blog</title><meta name="author" content="PandaMiVy"><meta name="copyright" content="PandaMiVy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="国内外手机号正则表达式phone_pattern &#x3D; &#123;   &#39;ar-DZ&#39;: &quot;^(\+?213|0)(5|6|7)\d&#123;8&#125;$&quot;,   &#39;ar-SY&#39;: &quot;^(!?(\+?963)|0)?9\d&#123;8&#125;$&quot;,   &#39;ar-SA&#39;: &quot;^(!?(\+?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则记录">
+<meta property="og:url" content="https://pandamiv.github.io/2024/06/15/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="PandaM_Blog">
+<meta property="og:description" content="国内外手机号正则表达式phone_pattern &#x3D; &#123;   &#39;ar-DZ&#39;: &quot;^(\+?213|0)(5|6|7)\d&#123;8&#125;$&quot;,   &#39;ar-SY&#39;: &quot;^(!?(\+?963)|0)?9\d&#123;8&#125;$&quot;,   &#39;ar-SA&#39;: &quot;^(!?(\+?">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pandamiv.github.io/images/theme/article-cover_img3.jpg">
+<meta property="article:published_time" content="2024-06-15T10:32:06.000Z">
+<meta property="article:modified_time" content="2024-06-15T10:32:49.309Z">
+<meta property="article:author" content="PandaMiVy">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="菜鸟学习">
+<meta property="article:tag" content="正则">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pandamiv.github.io/images/theme/article-cover_img3.jpg"><link rel="shortcut icon" href="/images/theme/favicon.png"><link rel="canonical" href="https://pandamiv.github.io/2024/06/15/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '正则记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-15 18:32:49'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/theme/avatar.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="PandaM_Blog"><span class="site-name">PandaM_Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">正则记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-15T10:32:06.000Z" title="发表于 2024-06-15 18:32:06">2024-06-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-15T10:32:49.309Z" title="更新于 2024-06-15 18:32:49">2024-06-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8A%AA%E5%8A%9B%E7%9A%84%E5%89%8D%E7%AB%AF/">努力的前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="正则记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h2 id="国内外手机号正则表达式"><a href="#国内外手机号正则表达式" class="headerlink" title="国内外手机号正则表达式"></a>国内外手机号正则表达式</h2><pre><code>phone_pattern = &#123;
+  &#39;ar-DZ&#39;: &quot;^(\+?213|0)(5|6|7)\d&#123;8&#125;$&quot;,
+  &#39;ar-SY&#39;: &quot;^(!?(\+?963)|0)?9\d&#123;8&#125;$&quot;,
+  &#39;ar-SA&#39;: &quot;^(!?(\+?966)|0)?5\d&#123;8&#125;$&quot;,
+  &#39;en-US&#39;: &quot;^(\+?1)?[2-9]\d&#123;2&#125;[2-9](?!11)\d&#123;6&#125;$&quot;,
+  &#39;cs-CZ&#39;: &quot;^(\+?420)? ?[1-9][0-9]&#123;2&#125; ?[0-9]&#123;3&#125; ?[0-9]&#123;3&#125;$&quot;,
+  &#39;de-DE&#39;: &quot;^(\+?49[ \.\-])?([\(]&#123;1&#125;[0-9]&#123;1,6&#125;[\)])?([0-9 \.\-\/]&#123;3,20&#125;)((x|ext|extension)[ ]?[0-9]&#123;1,4&#125;)?$&quot;,
+  &#39;da-DK&#39;: &quot;^(\+?45)?(\d&#123;8&#125;)$&quot;,
+  &#39;el-GR&#39;: &quot;^(\+?30)?(69\d&#123;8&#125;)$&quot;,
+  &#39;en-AU&#39;: &quot;^(\+?61|0)4\d&#123;8&#125;$&quot;,
+  &#39;en-GB&#39;: &quot;^(\+?44|0)7\d&#123;9&#125;$&quot;,
+  &#39;en-HK&#39;: &quot;^(\+?852\-?)?[569]\d&#123;3&#125;\-?\d&#123;4&#125;$&quot;,
+  &#39;en-IN&#39;: &quot;^(\+?91|0)?[789]\d&#123;9&#125;$&quot;,
+  &#39;en-NZ&#39;: &quot;^(\+?64|0)2\d&#123;7,9&#125;$&quot;,
+  &#39;en-ZA&#39;: &quot;^(\+?27|0)\d&#123;9&#125;$&quot;,
+  &#39;en-ZM&#39;: &quot;^(\+?26)?09[567]\d&#123;7&#125;$&quot;,
+  &#39;es-ES&#39;: &quot;^(\+?34)?(6\d&#123;1&#125;|7[1234])\d&#123;7&#125;$&quot;,
+  &#39;fi-FI&#39;: &quot;^(\+?358|0)\s?(4(0|1|2|4|5)?|50)\s?(\d\s?)&#123;4,8&#125;\d$&quot;,
+  &#39;fr-FR&#39;: &quot;^(\+?33|0)[67]\d&#123;8&#125;$&quot;,
+  &#39;he-IL&#39;: &quot;^(\+972|0)([23489]|5[0248]|77)[1-9]\d&#123;6&#125;&quot;,
+  &#39;hu-HU&#39;: &quot;^(\+?36)(20|30|70)\d&#123;7&#125;$&quot;,
+  &#39;it-IT&#39;: &quot;^(\+?39)?\s?3\d&#123;2&#125; ?\d&#123;6,7&#125;$&quot;,
+  &#39;ja-JP&#39;: &quot;^(\+?81|0)\d&#123;1,4&#125;[ \-]?\d&#123;1,4&#125;[ \-]?\d&#123;4&#125;$&quot;,
+  &#39;ms-MY&#39;: &quot;^(\+?6?01)&#123;1&#125;(([145]&#123;1&#125;(\-|\s)?\d&#123;7,8&#125;)|([236789]&#123;1&#125;(\s|\-)?\d&#123;7&#125;))$&quot;,
+  &#39;nb-NO&#39;: &quot;^(\+?47)?[49]\d&#123;7&#125;$&quot;,
+  &#39;nl-BE&#39;: &quot;^(\+?32|0)4?\d&#123;8&#125;$&quot;,
+  &#39;nn-NO&#39;: &quot;^(\+?47)?[49]\d&#123;7&#125;$&quot;,
+  &#39;pl-PL&#39;: &quot;^(\+?48)? ?[5-8]\d ?\d&#123;3&#125; ?\d&#123;2&#125; ?\d&#123;2&#125;$&quot;,
+  &#39;pt-BR&#39;: &quot;^(\+?55|0)\-?[1-9]&#123;2&#125;\-?[2-9]&#123;1&#125;\d&#123;3,4&#125;\-?\d&#123;4&#125;$&quot;,
+  &#39;pt-PT&#39;: &quot;^(\+?351)?9[1236]\d&#123;7&#125;$&quot;,
+  &#39;ru-RU&#39;: &quot;^(\+?7|8)?9\d&#123;9&#125;$&quot;,
+  &#39;sr-RS&#39;: &quot;^(\+3816|06)[- \d]&#123;5,9&#125;$&quot;,
+  &#39;tr-TR&#39;: &quot;^(\+?90|0)?5\d&#123;9&#125;$&quot;,
+  &#39;vi-VN&#39;: &quot;^(\+?84|0)?((1(2([0-9])|6([2-9])|88|99))|(9((?!5)[0-9])))([0-9]&#123;7&#125;)$&quot;,
+  &#39;zh-CN&#39;: &quot;^(\+?0?86\-?)?1[345789]\d&#123;9&#125;$&quot;,
+  &#39;zh-TW&#39;: &quot;^(\+?886\-?|0)?9\d&#123;8&#125;$&quot;
+&#125;
+
+简体中文(中国)	zh-cn	          繁体中文(台湾地区)	zh-tw
+繁体中文(香港)	zh-hk	          英语(香港)	en-hk
+英语(美国)	en-us	             英语(英国)	en-gb
+英语(全球)	en-ww	             英语(加拿大)	en-ca
+英语(澳大利亚)	en-au	          英语(爱尔兰)	en-ie
+英语(芬兰)	en-fi	             芬兰语(芬兰)	fi-fi
+英语(丹麦)	en-dk	             丹麦语(丹麦)	da-dk
+英语(以色列)	en-il	           希伯来语(以色列)	he-il
+英语(南非)	en-za	             英语(印度)	en-in
+英语(挪威)	en-no	             英语(新加坡)	en-sg
+英语(新西兰)	en-nz	           英语(印度尼西亚)	en-id
+英语(菲律宾)	en-ph	           英语(泰国)	en-th
+英语(马来西亚)	en-my	         英语(阿拉伯)	en-xa
+韩文(韩国)	ko-kr	            日语(日本)	ja-jp
+荷兰语(荷兰)	nl-nl	          荷兰语(比利时)	nl-be
+葡萄牙语(葡萄牙)	pt-pt	       葡萄牙语(巴西)	pt-br
+法语(法国)	fr-fr	            法语(卢森堡)	fr-lu
+法语(瑞士)	fr-ch	            法语(比利时)	fr-be
+法语(加拿大)	fr-ca	          西班牙语(拉丁美洲)	es-la
+西班牙语(西班牙)	es-es	       西班牙语(阿根廷)	es-ar
+西班牙语(美国)	es-us	         西班牙语(墨西哥)	es-mx
+西班牙语(哥伦比亚)	es-co      西班牙语(波多黎各)	es-pr
+德语(德国)	de-de	            德语(奥地利)	de-at
+德语(瑞士)	de-ch	            俄语(俄罗斯)	ru-ru
+意大利语(意大利)	it-it	       希腊语(希腊)	el-gr
+挪威语(挪威)	no-no	          匈牙利语(匈牙利)	hu-hu
+土耳其语(土耳其)	tr-tr	       捷克语(捷克共和国)	cs-cz
+斯洛文尼亚语	sl-sl	           波兰语(波兰)	pl-pl
+</code></pre>
+<h2 id="常用正则"><a href="#常用正则" class="headerlink" title="常用正则"></a>常用正则</h2><h3 id="手机号"><a href="#手机号" class="headerlink" title="手机号"></a>手机号</h3><pre><code>//严谨
+/^1((3[\d])|(4[5,6,9])|(5[0-3,5-9])|(6[5-7])|(7[0-8])|(8[1-3,5-8])|(9[1,8,9]))\d&#123;8&#125;$/
+
+//(宽松), 只要是13,14,15,16,17,18,19开头即可
+/^((\+|00)86)?1[3-9]\d&#123;9&#125;$/
+
+//(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条
+/^((\+|00)86)?1\d&#123;10&#125;$/
+</code></pre>
+<h3 id="是否电话格式-手机和座机"><a href="#是否电话格式-手机和座机" class="headerlink" title="是否电话格式(手机和座机)"></a>是否电话格式(手机和座机)</h3><pre><code>/^((0\d&#123;2,3&#125;-\d&#123;7,8&#125;)|(1[345789]\d&#123;9&#125;))$/
+</code></pre>
+<h3 id="大写字母"><a href="#大写字母" class="headerlink" title="大写字母"></a>大写字母</h3><pre><code>/^[A-Z]+$/
+</code></pre>
+<h3 id="日期-如-2000-01-01"><a href="#日期-如-2000-01-01" class="headerlink" title="日期,如: 2000-01-01"></a>日期,如: 2000-01-01</h3><pre><code>/^\d&#123;4&#125;(-)\d&#123;1,2&#125;\1\d&#123;1,2&#125;$/
+</code></pre>
+<h3 id="email地址"><a href="#email地址" class="headerlink" title="email地址"></a>email地址</h3><pre><code>/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+</code></pre>
+<h3 id="国内座机电话-如-0341-86091234"><a href="#国内座机电话-如-0341-86091234" class="headerlink" title="国内座机电话,如: 0341-86091234"></a>国内座机电话,如: 0341-86091234</h3><pre><code>/\d&#123;3&#125;-\d&#123;8&#125;|\d&#123;4&#125;-\d&#123;7&#125;/
+</code></pre>
+<h3 id="身份证号-15位、18位数字-，最后一位是校验位，可能为数字或字符X"><a href="#身份证号-15位、18位数字-，最后一位是校验位，可能为数字或字符X" class="headerlink" title="身份证号(15位、18位数字)，最后一位是校验位，可能为数字或字符X"></a>身份证号(15位、18位数字)，最后一位是校验位，可能为数字或字符X</h3><pre><code>/(^\d&#123;15&#125;$)|(^\d&#123;18&#125;$)|(^\d&#123;17&#125;(\d|X|x)$)/
+</code></pre>
+<h3 id="帐号是否合法-字母开头，允许5-16字节，允许字母数字下划线组合"><a href="#帐号是否合法-字母开头，允许5-16字节，允许字母数字下划线组合" class="headerlink" title="帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合)"></a>帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合)</h3><pre><code>/^[a-zA-Z][a-zA-Z0-9_]&#123;4,15&#125;$/
+</code></pre>
+<h3 id="只包含中文"><a href="#只包含中文" class="headerlink" title="只包含中文"></a>只包含中文</h3><pre><code>/^[\u4E00-\u9FA5]/
+</code></pre>
+<h3 id="是否小数"><a href="#是否小数" class="headerlink" title="是否小数"></a>是否小数</h3><pre><code>/^\d+\.\d+$/
+</code></pre>
+<h3 id="是否8位纯数字"><a href="#是否8位纯数字" class="headerlink" title="是否8位纯数字"></a>是否8位纯数字</h3><pre><code>/^[0-9]&#123;8&#125;$/
+</code></pre>
+<h3 id="是否qq号格式正确"><a href="#是否qq号格式正确" class="headerlink" title="是否qq号格式正确"></a>是否qq号格式正确</h3><pre><code>/^[1-9]*[1-9][0-9]*$/
+</code></pre>
+<h3 id="是否由数字和字母组成"><a href="#是否由数字和字母组成" class="headerlink" title="是否由数字和字母组成"></a>是否由数字和字母组成</h3><pre><code>/^[A-Za-z0-9]+$/
+</code></pre>
+<h3 id="是否小写字母组成"><a href="#是否小写字母组成" class="headerlink" title="是否小写字母组成"></a>是否小写字母组成</h3><pre><code>/^[a-z]+$/
+</code></pre>
+<h3 id="密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符"><a href="#密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符" class="headerlink" title="密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符"></a>密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</h3><pre><code>/^.*(?=.&#123;6,&#125;)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/
+</code></pre>
+<h3 id="用户名正则，4到16位（字母，数字，下划线，减号）"><a href="#用户名正则，4到16位（字母，数字，下划线，减号）" class="headerlink" title="用户名正则，4到16位（字母，数字，下划线，减号）"></a>用户名正则，4到16位（字母，数字，下划线，减号）</h3><pre><code>/^[a-zA-Z0-9_-]&#123;4,16&#125;$/
+</code></pre>
+<h3 id="ipv4地址正则"><a href="#ipv4地址正则" class="headerlink" title="ipv4地址正则"></a>ipv4地址正则</h3><pre><code>/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.)&#123;3&#125;(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+</code></pre>
+<h3 id="微信号，6至20位，以字母开头，字母，数字，减号，下划线"><a href="#微信号，6至20位，以字母开头，字母，数字，减号，下划线" class="headerlink" title="微信号，6至20位，以字母开头，字母，数字，减号，下划线"></a>微信号，6至20位，以字母开头，字母，数字，减号，下划线</h3><pre><code>/^[a-zA-Z0-9_-]&#123;4,16&#125;$/
+</code></pre>
+<h3 id="中国邮政编码"><a href="#中国邮政编码" class="headerlink" title="中国邮政编码"></a>中国邮政编码</h3><pre><code>/^(0[1-7]|1[0-356]|2[0-7]|3[0-6]|4[0-7]|5[1-7]|6[1-7]|7[0-5]|8[013-6])\d&#123;4&#125;$/
+</code></pre>
+<h3 id="只包含中文和数字"><a href="#只包含中文和数字" class="headerlink" title="只包含中文和数字"></a>只包含中文和数字</h3><pre><code>/^(([\u4E00-\u9FA5])|(\d))+$/
+</code></pre>
+<h3 id="非字母"><a href="#非字母" class="headerlink" title="非字母"></a>非字母</h3><pre><code>/[^A-Za-z]/
+</code></pre>
+<h3 id="用户名正则，4到16位（字母，数字，下划线，减号）-1"><a href="#用户名正则，4到16位（字母，数字，下划线，减号）-1" class="headerlink" title="用户名正则，4到16位（字母，数字，下划线，减号）"></a>用户名正则，4到16位（字母，数字，下划线，减号）</h3><pre><code>/^[a-zA-Z]([-_a-zA-Z0-9]&#123;5,19&#125;)+$/
+</code></pre>
+<h3 id="用户名正则，4到16位（字母，数字，下划线，减号）-2"><a href="#用户名正则，4到16位（字母，数字，下划线，减号）-2" class="headerlink" title="用户名正则，4到16位（字母，数字，下划线，减号）"></a>用户名正则，4到16位（字母，数字，下划线，减号）</h3><pre><code>/^[a-zA-Z]([-_a-zA-Z0-9]&#123;5,19&#125;)+$/
+</code></pre>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://PandaMiV.github.io">PandaMiVy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://pandamiv.github.io/2024/06/15/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/">https://pandamiv.github.io/2024/06/15/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://PandaMiV.github.io" target="_blank">PandaM_Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a><a class="post-meta__tags" href="/tags/%E8%8F%9C%E9%B8%9F%E5%AD%A6%E4%B9%A0/">菜鸟学习</a><a class="post-meta__tags" href="/tags/%E6%AD%A3%E5%88%99/">正则</a></div><div class="post_share"><div class="social-share" data-image="/images/theme/article-cover_img3.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/06/15/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/" title="学习网站记录"><img class="cover" src="/images/theme/article-cover_img3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">学习网站记录</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/06/15/flutter%E5%AD%A6%E4%B9%A0/" title="flutter学习"><img class="cover" src="/images/theme/article-cover_img3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-15</div><div class="title">flutter学习</div></div></a></div><div><a href="/2024/06/01/%E6%90%AD%E5%BB%BAVue2%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/" title="搭建Vue2项目记录"><img class="cover" src="/images/theme/article-cover_img3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-01</div><div class="title">搭建Vue2项目记录</div></div></a></div><div><a href="/2024/06/15/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/" title="学习网站记录"><img class="cover" src="/images/theme/article-cover_img3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-15</div><div class="title">学习网站记录</div></div></a></div><div><a href="/2024/05/31/%E5%BB%BA%E7%AB%99%E6%88%90%E5%8A%9F%E7%AC%AC%E4%B8%80%E5%A4%A9%EF%BC%81/" title="建站成功第一天！"><img class="cover" src="/images/theme/article-cover_img3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-05-31</div><div class="title">建站成功第一天！</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/theme/avatar.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">PandaMiVy</div><div class="author-info__description">想赚大钱的菜鸟前端 =v=</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E5%A4%96%E6%89%8B%E6%9C%BA%E5%8F%B7%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">国内外手机号正则表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99"><span class="toc-number">2.</span> <span class="toc-text">常用正则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E5%8F%B7"><span class="toc-number">2.1.</span> <span class="toc-text">手机号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E5%90%A6%E7%94%B5%E8%AF%9D%E6%A0%BC%E5%BC%8F-%E6%89%8B%E6%9C%BA%E5%92%8C%E5%BA%A7%E6%9C%BA"><span class="toc-number">2.2.</span> <span class="toc-text">是否电话格式(手机和座机)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%86%99%E5%AD%97%E6%AF%8D"><span class="toc-number">2.3.</span> <span class="toc-text">大写字母</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F-%E5%A6%82-2000-01-01"><span class="toc-number">2.4.</span> <span class="toc-text">日期,如: 2000-01-01</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#email%E5%9C%B0%E5%9D%80"><span class="toc-number">2.5.</span> <span class="toc-text">email地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E5%BA%A7%E6%9C%BA%E7%94%B5%E8%AF%9D-%E5%A6%82-0341-86091234"><span class="toc-number">2.6.</span> <span class="toc-text">国内座机电话,如: 0341-86091234</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BA%AB%E4%BB%BD%E8%AF%81%E5%8F%B7-15%E4%BD%8D%E3%80%8118%E4%BD%8D%E6%95%B0%E5%AD%97-%EF%BC%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%BD%8D%E6%98%AF%E6%A0%A1%E9%AA%8C%E4%BD%8D%EF%BC%8C%E5%8F%AF%E8%83%BD%E4%B8%BA%E6%95%B0%E5%AD%97%E6%88%96%E5%AD%97%E7%AC%A6X"><span class="toc-number">2.7.</span> <span class="toc-text">身份证号(15位、18位数字)，最后一位是校验位，可能为数字或字符X</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%90%E5%8F%B7%E6%98%AF%E5%90%A6%E5%90%88%E6%B3%95-%E5%AD%97%E6%AF%8D%E5%BC%80%E5%A4%B4%EF%BC%8C%E5%85%81%E8%AE%B85-16%E5%AD%97%E8%8A%82%EF%BC%8C%E5%85%81%E8%AE%B8%E5%AD%97%E6%AF%8D%E6%95%B0%E5%AD%97%E4%B8%8B%E5%88%92%E7%BA%BF%E7%BB%84%E5%90%88"><span class="toc-number">2.8.</span> <span class="toc-text">帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AA%E5%8C%85%E5%90%AB%E4%B8%AD%E6%96%87"><span class="toc-number">2.9.</span> <span class="toc-text">只包含中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E5%90%A6%E5%B0%8F%E6%95%B0"><span class="toc-number">2.10.</span> <span class="toc-text">是否小数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E5%90%A68%E4%BD%8D%E7%BA%AF%E6%95%B0%E5%AD%97"><span class="toc-number">2.11.</span> <span class="toc-text">是否8位纯数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E5%90%A6qq%E5%8F%B7%E6%A0%BC%E5%BC%8F%E6%AD%A3%E7%A1%AE"><span class="toc-number">2.12.</span> <span class="toc-text">是否qq号格式正确</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E5%90%A6%E7%94%B1%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E7%BB%84%E6%88%90"><span class="toc-number">2.13.</span> <span class="toc-text">是否由数字和字母组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E5%90%A6%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%E7%BB%84%E6%88%90"><span class="toc-number">2.14.</span> <span class="toc-text">是否小写字母组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E5%BC%BA%E5%BA%A6%E6%AD%A3%E5%88%99%EF%BC%8C%E6%9C%80%E5%B0%916%E4%BD%8D%EF%BC%8C%E5%8C%85%E6%8B%AC%E8%87%B3%E5%B0%911%E4%B8%AA%E5%A4%A7%E5%86%99%E5%AD%97%E6%AF%8D%EF%BC%8C1%E4%B8%AA%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%EF%BC%8C1%E4%B8%AA%E6%95%B0%E5%AD%97%EF%BC%8C1%E4%B8%AA%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="toc-number">2.15.</span> <span class="toc-text">密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%90%8D%E6%AD%A3%E5%88%99%EF%BC%8C4%E5%88%B016%E4%BD%8D%EF%BC%88%E5%AD%97%E6%AF%8D%EF%BC%8C%E6%95%B0%E5%AD%97%EF%BC%8C%E4%B8%8B%E5%88%92%E7%BA%BF%EF%BC%8C%E5%87%8F%E5%8F%B7%EF%BC%89"><span class="toc-number">2.16.</span> <span class="toc-text">用户名正则，4到16位（字母，数字，下划线，减号）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ipv4%E5%9C%B0%E5%9D%80%E6%AD%A3%E5%88%99"><span class="toc-number">2.17.</span> <span class="toc-text">ipv4地址正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E5%8F%B7%EF%BC%8C6%E8%87%B320%E4%BD%8D%EF%BC%8C%E4%BB%A5%E5%AD%97%E6%AF%8D%E5%BC%80%E5%A4%B4%EF%BC%8C%E5%AD%97%E6%AF%8D%EF%BC%8C%E6%95%B0%E5%AD%97%EF%BC%8C%E5%87%8F%E5%8F%B7%EF%BC%8C%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-number">2.18.</span> <span class="toc-text">微信号，6至20位，以字母开头，字母，数字，减号，下划线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E5%9B%BD%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81"><span class="toc-number">2.19.</span> <span class="toc-text">中国邮政编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AA%E5%8C%85%E5%90%AB%E4%B8%AD%E6%96%87%E5%92%8C%E6%95%B0%E5%AD%97"><span class="toc-number">2.20.</span> <span class="toc-text">只包含中文和数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E5%AD%97%E6%AF%8D"><span class="toc-number">2.21.</span> <span class="toc-text">非字母</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%90%8D%E6%AD%A3%E5%88%99%EF%BC%8C4%E5%88%B016%E4%BD%8D%EF%BC%88%E5%AD%97%E6%AF%8D%EF%BC%8C%E6%95%B0%E5%AD%97%EF%BC%8C%E4%B8%8B%E5%88%92%E7%BA%BF%EF%BC%8C%E5%87%8F%E5%8F%B7%EF%BC%89-1"><span class="toc-number">2.22.</span> <span class="toc-text">用户名正则，4到16位（字母，数字，下划线，减号）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%90%8D%E6%AD%A3%E5%88%99%EF%BC%8C4%E5%88%B016%E4%BD%8D%EF%BC%88%E5%AD%97%E6%AF%8D%EF%BC%8C%E6%95%B0%E5%AD%97%EF%BC%8C%E4%B8%8B%E5%88%92%E7%BA%BF%EF%BC%8C%E5%87%8F%E5%8F%B7%EF%BC%89-2"><span class="toc-number">2.23.</span> <span class="toc-text">用户名正则，4到16位（字母，数字，下划线，减号）</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/06/15/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/" title="正则记录"><img src="/images/theme/article-cover_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则记录"/></a><div class="content"><a class="title" href="/2024/06/15/%E6%AD%A3%E5%88%99%E8%AE%B0%E5%BD%95/" title="正则记录">正则记录</a><time datetime="2024-06-15T10:32:06.000Z" title="发表于 2024-06-15 18:32:06">2024-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/15/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/" title="学习网站记录"><img src="/images/theme/article-cover_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习网站记录"/></a><div class="content"><a class="title" href="/2024/06/15/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/" title="学习网站记录">学习网站记录</a><time datetime="2024-06-15T09:22:22.000Z" title="发表于 2024-06-15 17:22:22">2024-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/15/flutter%E5%AD%A6%E4%B9%A0/" title="flutter学习"><img src="/images/theme/article-cover_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="flutter学习"/></a><div class="content"><a class="title" href="/2024/06/15/flutter%E5%AD%A6%E4%B9%A0/" title="flutter学习">flutter学习</a><time datetime="2024-06-15T08:32:30.000Z" title="发表于 2024-06-15 16:32:30">2024-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/01/%E6%90%AD%E5%BB%BAVue2%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/" title="搭建Vue2项目记录"><img src="/images/theme/article-cover_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建Vue2项目记录"/></a><div class="content"><a class="title" href="/2024/06/01/%E6%90%AD%E5%BB%BAVue2%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/" title="搭建Vue2项目记录">搭建Vue2项目记录</a><time datetime="2024-06-01T04:10:18.000Z" title="发表于 2024-06-01 12:10:18">2024-06-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/31/%E5%BB%BA%E7%AB%99%E6%88%90%E5%8A%9F%E7%AC%AC%E4%B8%80%E5%A4%A9%EF%BC%81/" title="建站成功第一天！"><img src="/images/theme/article-cover_img3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="建站成功第一天！"/></a><div class="content"><a class="title" href="/2024/05/31/%E5%BB%BA%E7%AB%99%E6%88%90%E5%8A%9F%E7%AC%AC%E4%B8%80%E5%A4%A9%EF%BC%81/" title="建站成功第一天！">建站成功第一天！</a><time datetime="2024-05-31T09:26:35.000Z" title="发表于 2024-05-31 17:26:35">2024-05-31</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By PandaMiVy</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
