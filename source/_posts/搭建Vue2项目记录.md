@@ -8,7 +8,7 @@ tags:
 - 菜鸟学习
 categories: 努力的前端
 ---
-### 1、设置
+### 设置
       module.exports = {
         parser: 'vue-eslint-parser',
         parserOptions: {
@@ -27,9 +27,15 @@ categories: 努力的前端
           "vue/multi-word-component-names": "off",
         },
       };
-### 2、封装路由
-### 3、封装axios请求
-### 4、vue-i18n搭建多语言环境
+
+
+### 封装路由
+
+
+### 封装axios请求
+
+
+### vue-i18n搭建多语言环境
 -vue2.0要用8版本的，使用9版本的会报错
       npm install vue-i18n@8.27.0 --save
 -在src目录下，新建i18n文件夹
@@ -92,6 +98,9 @@ categories: 努力的前端
         this.$i18n.locale = temp;
         localStorage.setItem('language', temp);
       },
+
+
+### 更换主题色
 
 
 ### 问题记录
