@@ -42,7 +42,7 @@ categories: 又要学新技术😇
 >> .dart结尾，例：index.dart
 
 
-## Dart 语法
+## Dart 基础
 
 ### Dart 基础运行
 > 
@@ -523,4 +523,120 @@ categories: 又要学新技术😇
 >>       }
 >>    
 >>     }
+>
+
+### 类型转换
+>
+> 
+
+## Dart 运算符
+
+### 算术运算符
+>
+>> \+(加) &nbsp;&nbsp; -(减) &nbsp;&nbsp; *(乘) &nbsp;&nbsp; /(除) &nbsp;&nbsp; %(取余) &nbsp;&nbsp; ~/(取整)
+>
+>     void main() {
+>     
+>       int a = 13;
+>       int b = 5;
+> 
+>       print(a + b); // 18
+>       print(a - b); // 8
+>       print(a * b); // 65
+>       print(a / b); // 2.6
+>       print(a % b); // 3
+>       print(a ~/ b); // 2
+>
+>       var c = a * b;
+>       print(c); // 65
+> 
+>     }
+> 
+
+### 关系运算符
+>
+>> == &nbsp;&nbsp; != &nbsp;&nbsp; > &nbsp;&nbsp; < &nbsp;&nbsp; >= &nbsp;&nbsp; <=
+>
+>     void main() {
+>     
+>       int a = 13;
+>       int b = 5;
+> 
+>       print(a == b); // false
+>       print(a != b); // true
+>       print(a > b); // true
+>       print(a < b); // false
+>       print(a >= b); // true
+>       print(a <= b); // false
+>
+>       if (a > b) {
+>         print('a大于b');  // a大于b
+>       } else {
+>         print('a小于b');
+>       }
+> 
+>     }
+>
+
+### 逻辑运算符
+>
+>> !(取反) &nbsp;&nbsp; &&(并且) &nbsp;&nbsp; ||(或者)
+>
+>     void main() {
+>     
+>       //  ! 取反
+>       bool flag = true;
+>       print(!flag); // false
+>       
+>       //  && 并且：全部为true的话值为true 否则值为false
+>       bool flag1 = true;
+>       bool flag2 = false;
+>       print(flag1 && flag2); // false
+>       
+>       //  || 或者：全部为false的话值为false 否则值为true
+>       bool flag3 = true;
+>       bool flag4 = false;
+>       print(flag3 || flag4); // true
+>     
+>     
+>       // 如果一个人的年龄是20 并且 性别是女则打印出来
+>       int age = 20;
+>       String sex = '女';
+>     
+>       if (age == 20 && sex == '女') {
+>         print("$age --- $sex"); // 20 --- 女
+>       } else {
+>         print("不打印");
+>       }
+>     
+>       // 如果一个人的年龄是20 或者 性别是女则打印出来
+>       int age1 = 23;
+>       String sex1 = '女';
+>     
+>       if (age1 == 20 || sex1 == '女') {
+>         print("$age1 --- $sex1"); // 23 --- 女
+>       } else {
+>        print("不打印");
+>       }
+> 
+>     }
+>
+
+### 赋值运算符
+
+#### 基础赋值运算符
+>
+>> = &nbsp;&nbsp; ??=
+>
+>
+
+#### 复合赋值运算符
+>
+>> += &nbsp;&nbsp; -= &nbsp;&nbsp; *= &nbsp;&nbsp; /= &nbsp;&nbsp; %= &nbsp;&nbsp; ~/=
+>
+
+## Dart 条件表达式
+>
+>> if else
+>> switch case
 > 
